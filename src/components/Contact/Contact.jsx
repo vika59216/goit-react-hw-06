@@ -1,4 +1,4 @@
-
+import React from "react";
 import { FaUser, FaPhone } from "react-icons/fa";
 import css from "./Contact.module.css";
 
@@ -18,10 +18,10 @@ const Contact = ( { contact }) => {
         </div>
         <div className={css.personPhon}>
           <FaPhone className={css.iconPhon} />
-          <p>{number}</p>
+          <p>{contact.number}</p>
         </div>
       </div>
-      <button onClick={() => onDelete(id)}>Delete</button>
+       <button onClick={onDelete}>Delete</button>
     </>
   );
 };

@@ -1,9 +1,7 @@
-import React from "react";
+
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
-
-
 import { addContact } from "../../redux/contactsSlice";
 import { useDispatch } from "react-redux";
 import { nanoid } from "nanoid";
@@ -58,14 +56,14 @@ const ContactForm = () => {
           <ErrorMessage component="p" name="name" />
         </div>
         <div className={css.formGroup}>
-          <label htmlFor="phone">Number:</label>
+          <label htmlFor="number">Number:</label>
           <Field
             type="tel"
-            id="phone"
-            name="phone"
+            id="number"
+            name="number"
             placeholder="Enter your phone number"
           />
-          <ErrorMessage component="p" name="phone" />
+          <ErrorMessage component="p" name="number" />
         </div>
         <button type="submit">Add contact</button>
       </Form>
@@ -73,13 +71,7 @@ const ContactForm = () => {
   );
 };
 
-
-
 export default ContactForm;
-
-
-
-
 
 
 
