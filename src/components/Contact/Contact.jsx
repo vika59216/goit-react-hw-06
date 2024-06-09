@@ -14,7 +14,7 @@ const Contact = ( { contact }) => {
       <div className={css.personData}>
         <div className={css.personName}>
           <FaUser className={css.iconPerson} />
-          <p>{name}</p>
+          <p>{contact.name}</p>
         </div>
         <div className={css.personPhon}>
           <FaPhone className={css.iconPhon} />
